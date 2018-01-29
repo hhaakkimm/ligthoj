@@ -1,2 +1,1 @@
 # lightoj
-# ligthoj
