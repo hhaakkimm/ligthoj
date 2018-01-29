@@ -31,12 +31,13 @@ const double PI=acos(-1.0);
 #define all(a) a.begin(),a.end()
 //=
 
-int t,a,b;
+ll a,l,r,t,b;
 
 int main()
 {
 	// ios_base::sync_with_stdio(false);
 	// cin.tie(0);
+
   cin >> t;
   forr(1,t,i)
   {

@@ -31,10 +31,43 @@ const double PI=acos(-1.0);
 #define all(a) a.begin(),a.end()
 //=
 
+ll a,l,r,t;
+
 
 int main()
 {
-	ios_base::sync_with_stdio(false);
-	cin.tie(0);
+	cin >> t;
+	forr(1,t,i)
+	{
+		cin >> a;
+		l = 0,r = 100000000;
+		while(l<r)
+		{
+			ll m = (l+r)>>1;
+			if(m*m<a)
+				l = m+1;
+			else
+				r = m;
+		}
+		l = (r-1)*(r-1)+1;
+		//cout << r << ' ';
+
+		ll m = (l+r*r)>>1;
+		if(r%2==0)
+		{
+			if(a>=m)
+				printf("Case %d: %lld %lld\n",i,m-l+1,r*r-a+1);
+			else
+				printf("Case %d: %lld %lld\n",i,a-l+1,r);
+		}
+		else
+		{
+			if(a>=m)
+				printf("Case %d: %lld %lld\n",i,r*r-a+1,m-l+1);
+			else
+				printf("Case %d: %lld %lld\n",i,r,a-l+1);
+		}
+
+	}
 	return 0;
 }
